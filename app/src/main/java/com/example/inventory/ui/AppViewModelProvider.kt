@@ -40,9 +40,9 @@ object AppViewModelProvider {
             )
         }
         // Initializer for ItemEntryViewModel
-        initializer {
-            ItemEntryViewModel()
-        }
+//        initializer {
+//            ItemEntryViewModel()
+//        }
 
         // Initializer for ItemDetailsViewModel
         initializer {
@@ -54,6 +54,10 @@ object AppViewModelProvider {
         // Initializer for HomeViewModel
         initializer {
             HomeViewModel()
+        }
+
+        initializer {
+            ItemEntryViewModel(inventoryApplication().container.itemsRepository)
         }
     }
 }
